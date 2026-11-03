@@ -1,6 +1,6 @@
 # Wildrose encrypted software workbook
 
-Spreadsheet-style software register and browser-local credential vault for GitHub Pages. Version 1.1.0. No dependencies, analytics, or third-party scripts.
+Spreadsheet-style software register and browser-local credential vault for GitHub Pages. Version 1.1.1. No dependencies, analytics, or third-party scripts.
 
 ## Features
 
@@ -23,3 +23,7 @@ The previous public v1 starter contained general software information; that olde
 ## Publishing and development
 
 GitHub Pages deploys the repository root from main. Run `python3 -m http.server 8824` locally. The password-encrypted starter is `seed.encrypted.json`; schemas in `schema.js` contain column definitions only. Do not commit decrypted backups, credentials, or passwords. Do not replace encryption with a client-side password comparison.
+
+## Credential import bundles
+
+Encrypted imports may contain `kind: wildrose-credentials-import` and only the API key and login sheets. Import appends records after confirmation while preserving other sheets and existing matching records. Repeated imports skip matching entries. Only use trusted bundles. Real credential bundles must remain outside this public repository.
