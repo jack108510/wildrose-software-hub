@@ -1,6 +1,6 @@
 # Wildrose encrypted software workbook
 
-Spreadsheet-style software register and browser-local credential vault for GitHub Pages. Version 1.1.1. No dependencies, analytics, or third-party scripts.
+Spreadsheet-style software register and browser-local credential vault for GitHub Pages. Version 1.1.2. No dependencies, analytics, or third-party scripts.
 
 ## Features
 
@@ -13,6 +13,8 @@ The starter workbook and browser saves use AES-256-GCM with a fresh random 96-bi
 The workbook requires its password after each reload and locks after five minutes without interaction. Secret fields are masked by default; the selected field can be revealed for 15 seconds or copied. Credential sheets cannot be exported as plaintext CSV. JSON backups are encrypted using the same vault key, and can be imported on another device using this workbook and its password. There is no password reset or recovery service.
 
 Edits save only in localStorage on the current browser and origin. They do not sync to GitHub or other devices. Download encrypted backups regularly. Existing v1 browser data is migrated after successful unlock and removed only after the encrypted copy is saved successfully. Older plaintext v1 backup files can be imported; keep or delete those old files deliberately because they remain plaintext.
+
+The public Rose resource list in `rose-resources.js` is added to the Links sheet when a workbook is unlocked. Existing rows with the same URL are preserved, and the list adds no credentials. Browser-only edits to other sheets remain untouched.
 
 ## Security boundaries
 
